@@ -50,7 +50,10 @@
   - [x] Group inputs (그룹 입력)
   - [x] Multiple select bindings (다중 선택)
   - [x] Textarea inputs (Textarea 입력)
-- [ ] Classes and styles (클래스와 스타일)
+- [x] **Classes and styles** (클래스와 스타일) - 완료 ✅
+  - [x] The class attribute (class 속성)
+  - [x] The style directive (style 디렉티브)
+  - [x] Component styles (컴포넌트 스타일)
 - [ ] Attachments (첨부)
 - [ ] Transitions (트랜지션)
 

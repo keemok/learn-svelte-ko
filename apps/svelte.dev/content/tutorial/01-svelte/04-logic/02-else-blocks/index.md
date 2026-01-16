@@ -1,8 +1,8 @@
 ---
-title: Else blocks
+title: Else 블록
 ---
 
-Just like in JavaScript, an `if` block can have an `else` block:
+JavaScript처럼 `if` 블록에는 `else` 블록을 붙일 수 있어요:
 
 ```svelte
 /// file: App.svelte
@@ -13,4 +13,4 @@ Just like in JavaScript, an `if` block can have an `else` block:
 {/if}
 ```
 
-`{#...}` opens a block. `{/...}` closes a block. `{:...}` _continues_ a block. Congratulations — you've already learned almost all the syntax Svelte adds to HTML.
+`{#...}`는 블록을 열어요. `{/...}`는 블록을 닫아요. `{:...}`는 블록을 이어가요. 축하해요! 이제 Svelte가 HTML에 추가한 문법을 거의 다 배웠어요.

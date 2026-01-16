@@ -1,10 +1,10 @@
 ---
-title: If blocks
+title: If 블록
 ---
 
-HTML doesn't have a way of expressing _logic_, like conditionals and loops. Svelte does.
+HTML에는 조건문이나 반복문 같은 로직을 표현하는 방법이 없어요. Svelte에는 있죠.
 
-To conditionally render some markup, we wrap it in an `if` block. Let's add some text that appears when `count` is greater than `10`:
+조건부로 마크업을 렌더링하려면 `if` 블록으로 감싸면 돼요. `count`가 `10`보다 클 때 나타나는 텍스트를 추가해봐요:
 
 ```svelte
 /// file: App.svelte
@@ -18,4 +18,4 @@ To conditionally render some markup, we wrap it in an `if` block. Let's add some
 {/if}+++
 ```
 
-Try it — update the component, and click on the button a few times.
+시도해보세요. 컴포넌트를 업데이트하고 버튼을 몇 번 클릭해봐요.

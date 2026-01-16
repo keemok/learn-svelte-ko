@@ -25,7 +25,10 @@
   - [x] Inspecting state (상태 검사하기)
   - [x] Effects (이펙트)
   - [x] Universal reactivity (범용 반응성)
-- [ ] Props
+- [x] **Props** - 완료 ✅
+  - [x] Declaring props (Props 선언하기)
+  - [x] Default values (기본값)
+  - [x] Spread props (Spread props)
 - [ ] Logic (로직)
 - [ ] Events (이벤트)
 - [ ] Bindings (바인딩)

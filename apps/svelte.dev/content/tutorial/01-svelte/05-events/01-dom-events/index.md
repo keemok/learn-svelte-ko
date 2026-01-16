@@ -1,8 +1,8 @@
 ---
-title: DOM events
+title: DOM 이벤트
 ---
 
-As we've briefly seen already, you can listen to any DOM event on an element (such as click or [pointermove](https://developer.mozilla.org/en-US/docs/Web/API/Element/pointermove_event)) with an `on<name>` function:
+이미 간단히 봤듯이, `on<name>` 함수로 요소의 모든 DOM 이벤트(click이나 [pointermove](https://developer.mozilla.org/en-US/docs/Web/API/Element/pointermove_event) 같은)를 들을 수 있어요:
 
 ```svelte
 /// file: App.svelte
@@ -11,7 +11,7 @@ As we've briefly seen already, you can listen to any DOM event on an element (su
 </div>
 ```
 
-Like with any other property where the name matches the value, we can use the short form:
+다른 속성처럼 이름과 값이 일치하면 단축 표기법을 쓸 수 있어요:
 
 ```svelte
 /// file: App.svelte

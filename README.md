@@ -36,7 +36,12 @@
   - [x] Each blocks (Each 블록)
   - [x] Keyed each blocks (키가 있는 each 블록)
   - [x] Await blocks (Await 블록)
-- [ ] Events (이벤트)
+- [x] **Events** (이벤트) - 완료 ✅
+  - [x] DOM events (DOM 이벤트)
+  - [x] Inline handlers (인라인 핸들러)
+  - [x] Capturing (캡처링)
+  - [x] Component events (컴포넌트 이벤트)
+  - [x] Spreading events (이벤트 spread)
 - [ ] Bindings (바인딩)
 - [ ] Classes and styles (클래스와 스타일)
 - [ ] Attachments (첨부)

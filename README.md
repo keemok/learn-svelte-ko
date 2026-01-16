@@ -18,7 +18,13 @@
   - [x] Styling (스타일링)
   - [x] Nested components (중첩된 컴포넌트)
   - [x] HTML tags (HTML 태그)
-- [ ] Reactivity (반응성)
+- [x] **Reactivity** (반응성) - 완료 ✅
+  - [x] State (상태)
+  - [x] Deep state (깊은 상태)
+  - [x] Derived state (파생 상태)
+  - [x] Inspecting state (상태 검사하기)
+  - [x] Effects (이펙트)
+  - [x] Universal reactivity (범용 반응성)
 - [ ] Props
 - [ ] Logic (로직)
 - [ ] Events (이벤트)

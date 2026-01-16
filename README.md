@@ -10,69 +10,119 @@
 
 ## 📊 번역 진행 상황
 
-### Part 1: Basic Svelte
-- [ ] Introduction
-- [ ] Reactivity
+### Part 1: Basic Svelte (01-svelte)
+- [x] **Introduction** (소개) - 완료 ✅
+  - [x] Welcome to Svelte (Svelte에 오신 것을 환영합니다)
+  - [x] Your first component (첫 번째 컴포넌트)
+  - [x] Dynamic attributes (동적 속성)
+  - [x] Styling (스타일링)
+  - [x] Nested components (중첩된 컴포넌트)
+  - [x] HTML tags (HTML 태그)
+- [ ] Reactivity (반응성)
 - [ ] Props
-- [ ] Logic
-- [ ] Events
-- [ ] Bindings
-- [ ] Lifecycle
-- [ ] Stores
-- [ ] Motion
-- [ ] Transitions
-- [ ] Actions
-- [ ] Classes and styles
-- [ ] Component composition
-- [ ] Context API
-- [ ] Special elements
+- [ ] Logic (로직)
+- [ ] Events (이벤트)
+- [ ] Bindings (바인딩)
+- [ ] Classes and styles (클래스와 스타일)
+- [ ] Attachments (첨부)
+- [ ] Transitions (트랜지션)
 
-### Part 2: Advanced Svelte
-- [ ] Advanced reactivity
-- [ ] Advanced bindings
-- [ ] Advanced transitions
-- [ ] Advanced actions
+### Part 2: Advanced Svelte (02-advanced-svelte)
+- [ ] 작업 예정
 
-### Part 3: Basic SvelteKit
-- [ ] Introduction
-- [ ] Routing
-- [ ] Loading data
-- [ ] Headers and cookies
-- [ ] Shared modules
-- [ ] Forms
-- [ ] API routes
-- [ ] Stores
-- [ ] Errors and redirects
-- [ ] Advanced routing
-- [ ] Advanced loading
-- [ ] Environment variables
+### Part 3: Basic SvelteKit (03-sveltekit)
+- [ ] 작업 예정
+
+### Part 4: Advanced SvelteKit (04-advanced-sveltekit)
+- [ ] 작업 예정
 
 ## 🚀 로컬 개발 환경 설정
+
+### 1. pnpm 설치
+
+#### Windows
+**npm 사용 (권장):**
 ```bash
-# 의존성 설치
+npm install -g pnpm
+```
+
+**PowerShell (관리자 권한):**
+```powershell
+iwr https://get.pnpm.io/install.ps1 -useb | iex
+```
+
+**Chocolatey:**
+```bash
+choco install pnpm
+```
+
+#### macOS/Linux
+**npm 사용:**
+```bash
+npm install -g pnpm
+```
+
+**Homebrew (macOS):**
+```bash
+brew install pnpm
+```
+
+**curl (Linux/macOS):**
+```bash
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+```
+
+설치 확인:
+```bash
+pnpm --version
+```
+
+### 2. 의존성 설치
+```bash
+cd C:\project\13.svelte_learn\learn-svelte-ko
 pnpm install
+```
 
-# svelte.dev 앱으로 이동
-cd apps/svelte.dev
+### 3. svelte.dev 앱으로 이동
+```bash
+cd apps\svelte.dev
+```
 
-# 문서 동기화 (처음 한 번만)
+### 4. 문서 동기화 (처음 한 번만)
+**PowerShell:**
+```powershell
+$env:USE_GIT="true"; pnpm sync-docs
+```
+
+**CMD:**
+```cmd
+set USE_GIT=true && pnpm sync-docs
+```
+
+**Git Bash:**
+```bash
 USE_GIT=true pnpm sync-docs
+```
 
-# 개발 서버 실행
+### 5. 개발 서버 실행
+```bash
 pnpm run dev
 ```
+
+브라우저에서 `http://localhost:5173/tutorial/svelte/welcome-to-svelte` 접속
 
 ## 📁 튜토리얼 파일 위치
 
 튜토리얼 컨텐츠는 다음 경로에 있습니다:
 ```
 apps/svelte.dev/content/tutorial/
-├── part1-basic-svelte/
-├── part2-advanced-svelte/
-└── part3-basic-sveltekit/
+├── 01-svelte/              # Part 1: Basic Svelte
+├── 02-advanced-svelte/     # Part 2: Advanced Svelte
+├── 03-sveltekit/           # Part 3: Basic SvelteKit
+└── 04-advanced-sveltekit/  # Part 4: Advanced SvelteKit
 ```
 
-각 튜토리얼은 `README.md` 파일을 번역하면 됩니다.
+각 튜토리얼의 `index.md` 파일을 번역합니다.
 
 ## 🤝 기여 방법
 
@@ -87,6 +137,7 @@ apps/svelte.dev/content/tutorial/
 - 기술 용어는 원어를 병기합니다 (예: 컴포넌트(component))
 - 코드 주석도 한글로 번역합니다
 - 자연스러운 한국어 표현을 사용합니다
+- 존댓말을 사용합니다
 
 ## 📜 라이선스
 

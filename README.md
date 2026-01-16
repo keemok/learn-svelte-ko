@@ -78,7 +78,9 @@
   - [x] Snippets and render tags (Snippet과 render 태그)
   - [x] Passing snippets to components (컴포넌트에 snippet 전달하기)
   - [x] Implicit snippet props (암시적 snippet props)
-- [ ] Motion
+- [x] **Motion** (모션) - 완료 ✅
+  - [x] Tweened values (Tweened 값)
+  - [x] Springs (스프링)
 - [ ] Advanced bindings
 - [ ] Advanced transitions
 - [ ] Context

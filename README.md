@@ -54,7 +54,9 @@
   - [x] The class attribute (class 속성)
   - [x] The style directive (style 디렉티브)
   - [x] Component styles (컴포넌트 스타일)
-- [ ] Attachments (첨부)
+- [x] **Attachments** (Attachment) - 완료 ✅
+  - [x] The attach tag (attach 태그)
+  - [x] Attachment factories (Attachment 팩토리)
 - [ ] Transitions (트랜지션)
 
 ### Part 2: Advanced Svelte (02-advanced-svelte)

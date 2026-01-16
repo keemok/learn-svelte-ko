@@ -1,17 +1,17 @@
 ---
-title: The attach tag
+title: attach 태그
 ---
 
-Attachments are essentially element-level lifecycle functions. They're useful for things like:
+Attachment는 본질적으로 요소 수준의 생명주기 함수예요. 이런 것들에 유용해요:
 
-- interfacing with third-party libraries
-- lazy-loaded images
-- tooltips
-- adding custom event handlers
+- 서드파티 라이브러리와 인터페이싱
+- 지연 로드되는 이미지
+- 툴팁
+- 커스텀 이벤트 핸들러 추가
 
-In this app, you can scribble on the `<canvas>`, and change colours and brush size via the menu. But if you open the menu and cycle through the options with the Tab key, you'll soon find that the focus isn't _trapped_ inside the modal.
+이 앱에서는 `<canvas>`에 낙서할 수 있고, 메뉴를 통해 색상과 브러시 크기를 바꿀 수 있어요. 하지만 메뉴를 열고 Tab 키로 옵션들을 순환하다 보면, 포커스가 모달 안에 갇혀(trapped) 있지 않다는 걸 알게 될 거예요.
 
-We can fix that with an attachment. Import `trapFocus` from `attachments.svelte.js`...
+attachment로 이걸 고칠 수 있어요. `attachments.svelte.js`에서 `trapFocus`를 import하세요...
 
 ```svelte
 /// file: App.svelte
@@ -27,16 +27,16 @@ We can fix that with an attachment. Import `trapFocus` from `attachments.svelte.
 </script>
 ```
 
-...then add it to the menu with the `{@attach}` tag:
+...그다음 `{@attach}` 태그로 메뉴에 추가하세요:
 
 ```svelte
 /// file: App.svelte
 <div class="menu" +++{@attach trapFocus}+++>
 ```
 
-Let's take a look at the `trapFocus` function in `attachments.svelte.js`. An attachment function is called with a `node` — the `<div class="menu">` in our case — when the node is mounted to the DOM. Attachments run inside an [effect](effects), so they re-run whenever any state read inside the function changes.
+`attachments.svelte.js`의 `trapFocus` 함수를 살펴봐요. attachment 함수는 노드가 DOM에 마운트될 때 `node`(여기서는 `<div class="menu">`)와 함께 호출돼요. Attachment는 [이펙트(effect)](effects) 안에서 실행되기 때문에, 함수 내부에서 읽는 상태가 변경될 때마다 다시 실행돼요.
 
-First, we need to add an event listener that intercepts Tab key presses:
+먼저, Tab 키 입력을 가로채는 이벤트 리스너를 추가해야 해요:
 
 ```js
 /// file: attachments.svelte.js
@@ -44,9 +44,9 @@ focusable()[0]?.focus();
 +++const off = on(node, 'keydown', handleKeydown);+++
 ```
 
-> [!NOTE] [`on`](/docs/svelte/svelte-events#on) is a wrapper around `addEventListener` that uses <a href="/docs/svelte/basic-markup#Events-Event-delegation">event delegation</a>. It returns a function that removes the handler.
+> [!NOTE] [`on`](/docs/svelte/svelte-events#on)은 <a href="/docs/svelte/basic-markup#Events-Event-delegation">이벤트 위임</a>을 사용하는 `addEventListener`의 래퍼예요. 핸들러를 제거하는 함수를 반환해요.
 
-Second, we need to do some cleanup when the node is unmounted — removing the event listener, and restoring focus to where it was before the element mounted. As with effects, an attachment can return a teardown function, which runs immediately before the attachment re-runs or after the element is removed from the DOM:
+둘째로, 노드가 언마운트될 때 정리 작업을 해야 해요. 이벤트 리스너를 제거하고, 요소가 마운트되기 전에 있던 곳으로 포커스를 복원하는 거죠. 이펙트처럼 attachment도 teardown 함수를 반환할 수 있어요. 이 함수는 attachment가 다시 실행되기 직전이나 요소가 DOM에서 제거된 후에 실행돼요:
 
 ```js
 /// file: attachments.svelte.js
@@ -59,4 +59,4 @@ const off = on(node, 'keydown', handleKeydown);
 };+++
 ```
 
-Now, when you open the menu, you can cycle through the options with the Tab key.
+이제 메뉴를 열면 Tab 키로 옵션들을 순환할 수 있어요.

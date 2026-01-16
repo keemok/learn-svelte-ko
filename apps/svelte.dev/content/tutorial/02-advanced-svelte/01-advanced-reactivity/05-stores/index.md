@@ -1,14 +1,14 @@
 ---
-title: Stores
+title: 스토어(Stores)
 ---
 
-Prior to the introduction of runes in Svelte 5, stores were the idiomatic way to handle reactive state outside components. That's no longer the case, but you'll still encounter stores when using Svelte (including in SvelteKit, for now), so it's worth knowing how to use them.
+Svelte 5에 룬(rune)이 도입되기 전에는, 스토어가 컴포넌트 외부의 반응형 상태를 다루는 관용적인 방법이었어요. 이제는 더 이상 그렇지 않지만, Svelte를 사용할 때(지금은 SvelteKit에서도) 여전히 스토어를 접하게 될 거예요. 그래서 사용법을 알아두는 게 좋아요.
 
-> [!NOTE] We won't cover how to create your own custom stores — for that, [consult the documentation](/docs/svelte/stores).
+> [!NOTE] 커스텀 스토어를 만드는 방법은 다루지 않을 거예요. 그건 [문서](/docs/svelte/stores)를 참고하세요.
 
-Let's revisit the example from the [universal reactivity](universal-reactivity) exercise, but this time implement the shared state using a store.
+[범용 반응성(universal reactivity)](universal-reactivity) 실습의 예제를 다시 살펴보되, 이번에는 스토어를 사용해서 공유 상태를 구현해봐요.
 
-In `shared.js` we're currently exporting `count`, which is a number. Turn it into a writable store:
+`shared.js`에서 현재 숫자인 `count`를 export하고 있어요. 이걸 writable 스토어로 바꿔봐요:
 
 ```js
 /// file: shared.js
@@ -17,7 +17,7 @@ In `shared.js` we're currently exporting `count`, which is a number. Turn it int
 export const count = +++writable(0)+++;
 ```
 
-To reference the value of the store, we prefix it with a `$` symbol. In `Counter.svelte`, update the text inside the `<button>` so that it no longer says `[object Object]`:
+스토어의 값을 참조하려면 `$` 기호를 앞에 붙여요. `Counter.svelte`에서 `<button>` 안의 텍스트를 업데이트해서 더 이상 `[object Object]`라고 나오지 않게 하세요:
 
 ```svelte
 /// file: Counter.svelte
@@ -26,13 +26,13 @@ To reference the value of the store, we prefix it with a `$` symbol. In `Counter
 </button>
 ```
 
-Finally, add the event handler. Because this is a writable store, we can update the value programmatically using its `set` or `update` method...
+마지막으로 이벤트 핸들러를 추가하세요. writable 스토어이기 때문에 `set`이나 `update` 메서드를 써서 프로그래밍 방식으로 값을 업데이트할 수 있어요...
 
 ```js
 count.update((n) => n + 1);
 ```
 
-...but since we're in a component we can continue using the `$` prefix:
+...하지만 컴포넌트 안에 있으니까 `$` 접두사를 계속 쓸 수 있어요:
 
 ```svelte
 /// file: Counter.svelte

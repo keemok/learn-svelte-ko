@@ -1,10 +1,10 @@
 ---
-title: Getters and setters
+title: Getter와 Setter
 ---
 
-Classes are particularly useful when you need to validate data. In the case of this `Box` class, it shouldn't be possible to keep embiggening past the maximum allowed by the sliders, but that's exactly what happens.
+클래스는 데이터를 검증해야 할 때 특히 유용해요. 이 `Box` 클래스의 경우, 슬라이더가 허용하는 최대값을 넘어서 계속 커지면 안 되는데, 지금은 정확히 그렇게 되고 있어요.
 
-We can fix that by replacing `width` and `height` with _getters_ and _setters_, otherwise known as _accessors_. First, convert them to [private properties](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties):
+`width`와 `height`를 getter와 setter로 바꿔서 고칠 수 있어요. 접근자(accessor)라고도 불리죠. 먼저 [프라이빗 속성](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties)으로 변환하세요:
 
 ```js
 /// file: App.svelte
@@ -22,7 +22,7 @@ class Box {
 }
 ```
 
-Then, create some getters and setters:
+그다음 getter와 setter를 만드세요:
 
 ```js
 /// file: App.svelte
@@ -52,7 +52,7 @@ class Box {
 }
 ```
 
-Finally, add the validation to the setters:
+마지막으로 setter에 검증을 추가하세요:
 
 ```js
 /// file: App.svelte
@@ -65,4 +65,4 @@ set height(value) {
 }
 ```
 
-It's now impossible to increase the box size past safe limits, whether through the `bind:value` on the range inputs, or the `embiggen` method, no matter how hard you press the button.
+이제 range 입력의 `bind:value`를 통하든 `embiggen` 메서드를 통하든, 버튼을 아무리 세게 눌러도 박스 크기를 안전한 한계를 넘어 늘릴 수 없어요.

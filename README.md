@@ -68,7 +68,20 @@
   - [x] Key blocks (Key 블록)
 
 ### Part 2: Advanced Svelte (02-advanced-svelte)
-- [ ] 작업 예정
+- [x] **Advanced reactivity** (고급 반응성) - 완료 ✅
+  - [x] Raw state (Raw 상태)
+  - [x] Reactive classes (반응형 클래스)
+  - [x] Getters and setters (Getter와 Setter)
+  - [x] Reactive built-ins (반응형 내장 객체)
+  - [x] Stores (스토어)
+- [ ] Snippets
+- [ ] Motion
+- [ ] Advanced bindings
+- [ ] Advanced transitions
+- [ ] Context
+- [ ] Special elements
+- [ ] Script module
+- [ ] Next steps
 
 ### Part 3: Basic SvelteKit (03-sveltekit)
 - [ ] 작업 예정

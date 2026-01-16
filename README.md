@@ -74,7 +74,10 @@
   - [x] Getters and setters (Getter와 Setter)
   - [x] Reactive built-ins (반응형 내장 객체)
   - [x] Stores (스토어)
-- [ ] Snippets
+- [x] **Snippets** (Snippet) - 완료 ✅
+  - [x] Snippets and render tags (Snippet과 render 태그)
+  - [x] Passing snippets to components (컴포넌트에 snippet 전달하기)
+  - [x] Implicit snippet props (암시적 snippet props)
 - [ ] Motion
 - [ ] Advanced bindings
 - [ ] Advanced transitions

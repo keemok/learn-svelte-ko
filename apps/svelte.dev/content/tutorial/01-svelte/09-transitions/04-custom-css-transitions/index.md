@@ -1,8 +1,8 @@
 ---
-title: Custom CSS transitions
+title: 커스텀 CSS 트랜지션
 ---
 
-The `svelte/transition` module has a handful of built-in transitions, but it's very easy to create your own. By way of example, this is the source of the `fade` transition:
+`svelte/transition` 모듈에는 몇 가지 내장 트랜지션이 있지만, 직접 만드는 것도 아주 쉬워요. 예를 들어, `fade` 트랜지션의 소스는 이래요:
 
 ```js
 function fade(node, { delay = 0, duration = 400 }) {
@@ -16,19 +16,19 @@ function fade(node, { delay = 0, duration = 400 }) {
 }
 ```
 
-The function takes two arguments — the node to which the transition is applied, and any parameters that were passed in — and returns a transition object which can have the following properties:
+함수는 두 개의 인자를 받아요. 트랜지션이 적용될 노드와 전달된 파라미터들이죠. 그리고 다음 속성들을 가질 수 있는 트랜지션 객체를 반환해요:
 
-- `delay` — milliseconds before the transition begins
-- `duration` — length of the transition in milliseconds
-- `easing` — a `p => t` easing function (see the chapter on [tweening](/tutorial/svelte/tweens))
-- `css` — a `(t, u) => css` function, where `u === 1 - t`
-- `tick` — a `(t, u) => {...}` function that has some effect on the node
+- `delay` — 트랜지션이 시작되기 전 밀리초
+- `duration` — 트랜지션의 길이(밀리초)
+- `easing` — `p => t` 이징 함수 ([tweening](/tutorial/svelte/tweens) 챕터 참고)
+- `css` — `(t, u) => css` 함수, 여기서 `u === 1 - t`
+- `tick` — 노드에 어떤 효과를 주는 `(t, u) => {...}` 함수
 
-The `t` value is `0` at the beginning of an intro or the end of an outro, and `1` at the end of an intro or beginning of an outro.
+`t` 값은 intro의 시작이나 outro의 끝에서 `0`이고, intro의 끝이나 outro의 시작에서 `1`이에요.
 
-Most of the time you should return the `css` property and _not_ the `tick` property, as CSS animations run off the main thread to prevent jank where possible. Svelte 'simulates' the transition and constructs a CSS animation, then lets it run.
+대부분의 경우 `tick` 속성이 아니라 `css` 속성을 반환해야 해요. CSS 애니메이션은 가능한 한 끊김을 방지하기 위해 메인 스레드 밖에서 실행되거든요. Svelte는 트랜지션을 '시뮬레이션'하고 CSS 애니메이션을 구성한 다음 실행하게 해요.
 
-For example, the `fade` transition generates a CSS animation somewhat like this:
+예를 들어, `fade` 트랜지션은 대략 이런 CSS 애니메이션을 생성해요:
 
 <!-- prettier-ignore-start -->
 ```css
@@ -40,7 +40,7 @@ For example, the `fade` transition generates a CSS animation somewhat like this:
 ```
 <!-- prettier-ignore-end -->
 
-We can get a lot more creative though. Let's make something truly gratuitous:
+하지만 훨씬 더 창의적일 수 있어요. 진짜 화려한 걸 만들어봐요:
 
 ```svelte
 /// file: App.svelte
@@ -69,4 +69,4 @@ We can get a lot more creative though. Let's make something truly gratuitous:
 </script>
 ```
 
-Remember: with great power comes great responsibility.
+기억하세요: 큰 힘에는 큰 책임이 따라요.

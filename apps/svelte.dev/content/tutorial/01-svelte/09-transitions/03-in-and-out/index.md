@@ -1,15 +1,15 @@
 ---
-title: In and out
+title: In과 out
 ---
 
-Instead of the `transition` directive, an element can have an `in` or an `out` directive, or both together. Import `fade` alongside `fly`...
+`transition` 디렉티브 대신, 요소는 `in`이나 `out` 디렉티브를 가질 수 있어요. 둘 다 함께 쓸 수도 있고요. `fly`와 함께 `fade`를 import하세요...
 
 ```js
 /// file: App.svelte
 import { +++fade+++, fly } from 'svelte/transition';
 ```
 
-...then replace the `transition` directive with separate `in` and `out` directives:
+...그다음 `transition` 디렉티브를 `in`과 `out` 디렉티브로 분리하세요:
 
 ```svelte
 /// file: App.svelte
@@ -18,4 +18,4 @@ import { +++fade+++, fly } from 'svelte/transition';
 </p>
 ```
 
-In this case, the transitions are _not_ reversed.
+이 경우에는 트랜지션이 역전되지 않아요.

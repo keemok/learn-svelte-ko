@@ -57,7 +57,15 @@
 - [x] **Attachments** (Attachment) - 완료 ✅
   - [x] The attach tag (attach 태그)
   - [x] Attachment factories (Attachment 팩토리)
-- [ ] Transitions (트랜지션)
+- [x] **Transitions** (트랜지션) - 완료 ✅
+  - [x] The transition directive (transition 디렉티브)
+  - [x] Adding parameters (파라미터 추가하기)
+  - [x] In and out (In과 out)
+  - [x] Custom CSS transitions (커스텀 CSS 트랜지션)
+  - [x] Custom JS transitions (커스텀 JS 트랜지션)
+  - [x] Transition events (트랜지션 이벤트)
+  - [x] Global transitions (전역 트랜지션)
+  - [x] Key blocks (Key 블록)
 
 ### Part 2: Advanced Svelte (02-advanced-svelte)
 - [ ] 작업 예정

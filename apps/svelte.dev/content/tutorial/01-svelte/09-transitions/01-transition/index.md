@@ -1,10 +1,10 @@
 ---
-title: The transition directive
+title: transition 디렉티브
 ---
 
-We can make more appealing user interfaces by gracefully transitioning elements into and out of the DOM. Svelte makes this very easy with the `transition` directive.
+요소가 DOM에 들어오고 나갈 때 부드럽게 전환되도록 하면 더 매력적인 사용자 인터페이스를 만들 수 있어요. Svelte는 `transition` 디렉티브로 이걸 아주 쉽게 만들어줘요.
 
-First, import the `fade` function from `svelte/transition`...
+먼저 `svelte/transition`에서 `fade` 함수를 import하세요...
 
 ```svelte
 /// file: App.svelte
@@ -15,7 +15,7 @@ First, import the `fade` function from `svelte/transition`...
 </script>
 ```
 
-...then add it to the `<p>` element:
+...그다음 `<p>` 요소에 추가하세요:
 
 ```svelte
 /// file: App.svelte

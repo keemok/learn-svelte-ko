@@ -1,8 +1,8 @@
 ---
-title: Custom JS transitions
+title: 커스텀 JS 트랜지션
 ---
 
-While you should generally use CSS for transitions as much as possible, there are some effects that can't be achieved without JavaScript, such as a typewriter effect:
+일반적으로 트랜지션에는 가능한 한 CSS를 사용해야 하지만, 타자기 효과처럼 JavaScript 없이는 달성할 수 없는 효과도 있어요:
 
 ```js
 /// file: App.svelte

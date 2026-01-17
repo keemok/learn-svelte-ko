@@ -129,7 +129,10 @@
   - [x] Validation (검증)
   - [x] Progressive enhancement (점진적 향상)
   - [x] Customizing use:enhance (use:enhance 커스터마이징하기)
-- [ ] API routes
+- [x] **API routes** (API 라우트) - 완료 ✅
+  - [x] GET handlers (GET 핸들러)
+  - [x] POST handlers (POST 핸들러)
+  - [x] Other handlers (다른 핸들러)
 - [ ] App state
 - [ ] Errors and redirects
 

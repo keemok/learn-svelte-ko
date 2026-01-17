@@ -1,10 +1,10 @@
 ---
-title: POST handlers
+title: POST 핸들러
 ---
 
-You can also add handlers that mutate data, such as `POST`. In most cases, you should use [form actions](the-form-element) instead — you'll end up writing less code, and it'll work without JavaScript, making it more resilient.
+`POST` 같이 데이터를 변경하는 핸들러도 추가할 수 있어요. 대부분의 경우 [폼 액션](the-form-element)을 대신 사용해야 해요. 더 적은 코드를 작성하게 되고, JavaScript 없이도 작동해서 더 탄력적이거든요.
 
-Inside the `keydown` event handler of the 'add a todo' `<input>`, let's post some data to the server:
+'add a todo' `<input>`의 `keydown` 이벤트 핸들러 안에서 서버에 데이터를 POST해봐요:
 
 ```svelte
 /// file: src/routes/+page.svelte
@@ -30,9 +30,9 @@ Inside the `keydown` event handler of the 'add a todo' `<input>`, let's post som
 />
 ```
 
-Here, we're posting some JSON to the `/todo` API route — using a `userid` from the user's cookies — and receiving the `id` of the newly created todo in response.
+여기서 우리는 사용자의 쿠키에서 `userid`를 사용해서 `/todo` API 라우트에 JSON을 POST하고, 응답으로 새로 생성된 할 일의 `id`를 받아요.
 
-Create the `/todo` route by adding a `src/routes/todo/+server.js` file with a `POST` handler that calls `createTodo` in `src/lib/server/database.js`:
+`src/lib/server/database.js`의 `createTodo`를 호출하는 `POST` 핸들러가 있는 `src/routes/todo/+server.js` 파일을 추가해서 `/todo` 라우트를 만드세요:
 
 ```js
 /// file: src/routes/todo/+server.js
@@ -49,9 +49,9 @@ export async function POST({ request, cookies }) {
 }
 ```
 
-As with `load` functions and form actions, the `request` is a standard [Request](https://developer.mozilla.org/en-US/docs/Web/API/Request) object; `await request.json()` returns the data that we posted from the event handler.
+`load` 함수와 폼 액션처럼, `request`는 표준 [Request](https://developer.mozilla.org/en-US/docs/Web/API/Request) 객체예요. `await request.json()`은 이벤트 핸들러에서 POST한 데이터를 반환해요.
 
-We're returning a response with a [201 Created](https://http.dog/201) status and the `id` of the newly generated todo in our database. Back in the event handler, we can use this to update the page:
+우리는 [201 Created](https://http.dog/201) 상태와 데이터베이스에 새로 생성된 할 일의 `id`로 응답을 반환하고 있어요. 이벤트 핸들러로 돌아가서, 이걸 사용해서 페이지를 업데이트할 수 있어요:
 
 ```svelte
 /// file: src/routes/+page.svelte
@@ -86,4 +86,4 @@ We're returning a response with a [201 Created](https://http.dog/201) status and
 />
 ```
 
-> [!NOTE] You should only update `data` in such a way that you'd get the same result by reloading the page. The `data` prop is not _deeply_ reactive, so you need to replace it — mutations like `data.todos = todos` will not cause a re-render.
+> [!NOTE] 페이지를 새로고침해서 얻을 수 있는 것과 같은 결과를 얻을 수 있는 방식으로만 `data`를 업데이트해야 해요. `data` prop은 깊게(deeply) 반응형이 아니기 때문에 교체해야 해요. `data.todos = todos` 같은 변경은 재렌더링을 일으키지 않아요.

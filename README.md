@@ -118,7 +118,9 @@
 - [x] **Loading data** (데이터 로딩) - 완료 ✅
   - [x] Page data (페이지 데이터)
   - [x] Layout data (레이아웃 데이터)
-- [ ] Headers and cookies
+- [x] **Headers and cookies** (헤더와 쿠키) - 완료 ✅
+  - [x] Setting headers (헤더 설정하기)
+  - [x] Reading and writing cookies (쿠키 읽고 쓰기)
 - [ ] Shared modules
 - [ ] Forms
 - [ ] API routes

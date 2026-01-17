@@ -158,7 +158,12 @@
 - [x] **Link options** (링크 옵션) - 완료 ✅
   - [x] Preloading (프리로딩)
   - [x] Reloading the page (페이지 새로고침)
-- [ ] Advanced routing
+- [x] **Advanced routing** (고급 라우팅) - 완료 ✅
+  - [x] Optional parameters (선택적 파라미터)
+  - [x] Rest parameters (나머지 파라미터)
+  - [x] Param matchers (파라미터 매처)
+  - [x] Route groups (라우트 그룹)
+  - [x] Breaking out of layouts (레이아웃에서 벗어나기)
 - [ ] Advanced loading
 - [ ] Environment variables
 - [ ] Conclusion

@@ -92,7 +92,8 @@
 - [x] **Advanced transitions** (고급 트랜지션) - 완료 ✅
   - [x] Deferred transitions (지연된 트랜지션)
   - [x] Animations (애니메이션)
-- [ ] Context
+- [x] **Context** (Context) - 완료 ✅
+  - [x] setContext and getContext (setContext와 getContext)
 - [ ] Special elements
 - [ ] Script module
 - [ ] Next steps

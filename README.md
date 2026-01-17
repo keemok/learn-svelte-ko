@@ -109,7 +109,16 @@
   - [x] Congratulations! (축하합니다!)
 
 ### Part 3: Basic SvelteKit (03-sveltekit)
-- [ ] 작업 예정
+- [x] **Introduction** (소개) - 완료 ✅
+  - [x] What is SvelteKit? (SvelteKit이란?)
+- [ ] Routing
+- [ ] Loading data
+- [ ] Headers and cookies
+- [ ] Shared modules
+- [ ] Forms
+- [ ] API routes
+- [ ] App state
+- [ ] Errors and redirects
 
 ### Part 4: Advanced SvelteKit (04-advanced-sveltekit)
 - [ ] 작업 예정

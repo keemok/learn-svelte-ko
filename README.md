@@ -155,7 +155,9 @@
   - [x] csr (csr)
   - [x] prerender (prerender)
   - [x] trailingSlash (trailingSlash)
-- [ ] Link options
+- [x] **Link options** (링크 옵션) - 완료 ✅
+  - [x] Preloading (프리로딩)
+  - [x] Reloading the page (페이지 새로고침)
 - [ ] Advanced routing
 - [ ] Advanced loading
 - [ ] Environment variables

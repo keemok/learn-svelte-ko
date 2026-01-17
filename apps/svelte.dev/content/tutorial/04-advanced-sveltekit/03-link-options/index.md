@@ -1,3 +1,3 @@
 ---
-title: Link options
+title: 링크 옵션
 ---

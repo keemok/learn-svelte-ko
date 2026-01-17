@@ -89,7 +89,9 @@
   - [x] This (This)
   - [x] Component bindings (컴포넌트 바인딩)
   - [x] Binding to component instances (컴포넌트 인스턴스에 바인딩하기)
-- [ ] Advanced transitions
+- [x] **Advanced transitions** (고급 트랜지션) - 완료 ✅
+  - [x] Deferred transitions (지연된 트랜지션)
+  - [x] Animations (애니메이션)
 - [ ] Context
 - [ ] Special elements
 - [ ] Script module

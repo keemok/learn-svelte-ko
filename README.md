@@ -123,7 +123,12 @@
   - [x] Reading and writing cookies (쿠키 읽고 쓰기)
 - [x] **Shared modules** (공유 모듈) - 완료 ✅
   - [x] The $lib alias ($lib 별칭)
-- [ ] Forms
+- [x] **Forms** (폼) - 완료 ✅
+  - [x] The <form> element (<form> 요소)
+  - [x] Named form actions (이름이 있는 폼 액션)
+  - [x] Validation (검증)
+  - [x] Progressive enhancement (점진적 향상)
+  - [x] Customizing use:enhance (use:enhance 커스터마이징하기)
 - [ ] API routes
 - [ ] App state
 - [ ] Errors and redirects

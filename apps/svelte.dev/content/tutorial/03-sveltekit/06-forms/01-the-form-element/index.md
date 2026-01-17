@@ -1,10 +1,10 @@
 ---
-title: The <form> element
+title: <form> 요소
 ---
 
-In the chapter on [loading data](page-data), we saw how to get data from the server to the browser. Sometimes you need to send data in the opposite direction, and that's where `<form>` — the web platform's way of submitting data — comes in.
+[데이터 로딩](page-data) 챕터에서 서버에서 브라우저로 데이터를 가져오는 방법을 봤어요. 때로는 반대 방향으로 데이터를 보내야 하는데, 그때 데이터를 제출하는 웹 플랫폼의 방법인 `<form>`이 등장해요.
 
-Let's build a todo app. We've already got an in-memory database set up in `src/lib/server/database.js`, and our `load` function in `src/routes/+page.server.js` uses the [`cookies`](/docs/kit/load#Cookies) API so that we can have a per-user todo list, but we need to add a `<form>` to create new todos:
+할 일 앱을 만들어봐요. `src/lib/server/database.js`에 이미 인메모리 데이터베이스가 설정돼 있고, `src/routes/+page.server.js`의 `load` 함수는 [`cookies`](/docs/kit/load#Cookies) API를 사용해서 사용자별 할 일 목록을 가질 수 있지만, 새 할 일을 만들기 위한 `<form>`을 추가해야 해요:
 
 ```svelte
 /// file: src/routes/+page.svelte
@@ -23,7 +23,7 @@ Let's build a todo app. We've already got an in-memory database set up in `src/l
 <ul class="todos">
 ```
 
-If we type something into the `<input>` and hit Enter, the browser makes a POST request (because of the `method="POST"` attribute) to the current page. But that results in an error, because we haven't created a server-side _action_ to handle the POST request. Let's do that now:
+`<input>`에 뭔가 입력하고 Enter를 치면, 브라우저가 현재 페이지로 POST 요청을 만들어요 (`method="POST"` 속성 때문에). 하지만 POST 요청을 처리할 서버 사이드 액션(action)을 만들지 않았기 때문에 에러가 발생해요. 지금 만들어봐요:
 
 ```js
 /// file: src/routes/+page.server.js
@@ -41,8 +41,8 @@ export function load({ cookies }) {
 };+++
 ```
 
-The `request` is a standard [Request](https://developer.mozilla.org/en-US/docs/Web/API/Request) object; `await request.formData()` returns a [`FormData`](https://developer.mozilla.org/en-US/docs/Web/API/FormData) instance.
+`request`는 표준 [Request](https://developer.mozilla.org/en-US/docs/Web/API/Request) 객체예요. `await request.formData()`는 [`FormData`](https://developer.mozilla.org/en-US/docs/Web/API/FormData) 인스턴스를 반환해요.
 
-When we hit Enter, the database is updated and the page reloads with the new data.
+Enter를 치면 데이터베이스가 업데이트되고 페이지가 새 데이터로 새로고침돼요.
 
-Notice that we haven't had to write any `fetch` code or anything like that — data updates automatically. And because we're using a `<form>` element, this app would work even if JavaScript was disabled or unavailable.
+`fetch` 코드나 그런 걸 전혀 작성하지 않았다는 걸 주목하세요. 데이터가 자동으로 업데이트돼요. 그리고 `<form>` 요소를 사용하고 있기 때문에, 이 앱은 JavaScript가 비활성화되거나 사용 불가능해도 작동해요.

@@ -1,12 +1,12 @@
 ---
-title: Pages
+title: 페이지
 ---
 
-SvelteKit uses filesystem-based routing, which means that the _routes_ of your app — in other words, what the app should do when a user navigates to a particular URL — are defined by the directories in your codebase.
+SvelteKit은 파일시스템 기반 라우팅을 사용해요. 즉, 앱의 라우트(다시 말해, 사용자가 특정 URL로 이동할 때 앱이 무엇을 해야 하는지)가 코드베이스의 디렉토리로 정의된다는 의미예요.
 
-Every `+page.svelte` file inside `src/routes` creates a page in your app. In this app we currently have one page — `src/routes/+page.svelte`, which maps to `/`. If we navigate to `/about`, we'll see a 404 Not Found error.
+`src/routes` 안의 모든 `+page.svelte` 파일은 앱에 페이지를 만들어요. 이 앱에는 현재 하나의 페이지가 있어요. `/`에 매핑되는 `src/routes/+page.svelte`죠. `/about`으로 이동하면 404 Not Found 에러가 보일 거예요.
 
-Let's fix that. Add a second page, `src/routes/about/+page.svelte`, copy the contents of `src/routes/+page.svelte`, and update it:
+고쳐봐요. 두 번째 페이지 `src/routes/about/+page.svelte`를 추가하고, `src/routes/+page.svelte`의 내용을 복사한 다음 업데이트하세요:
 
 ```svelte
 /// file: src/routes/about/+page.svelte
@@ -19,6 +19,6 @@ Let's fix that. Add a second page, `src/routes/about/+page.svelte`, copy the con
 <p>this is the +++about+++ page.</p>
 ```
 
-We can now navigate between `/` and `/about`.
+이제 `/`와 `/about` 사이를 탐색할 수 있어요.
 
-> [!NOTE] Unlike traditional multi-page apps, navigating to `/about` and back updates the contents of the current page, like a single-page app. This gives us the best of both worlds — fast server-rendered startup, then instant navigation. (This behaviour can be [configured](/docs/kit/page-options).)
+> [!NOTE] 전통적인 멀티 페이지 앱과 달리, `/about`으로 이동했다가 돌아오면 싱글 페이지 앱처럼 현재 페이지의 내용이 업데이트돼요. 이렇게 양쪽의 장점을 모두 얻을 수 있어요. 빠른 서버 렌더링 시작과 즉각적인 탐색이죠. (이 동작은 [설정할 수 있어요](/docs/kit/page-options).)

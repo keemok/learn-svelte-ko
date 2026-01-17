@@ -111,7 +111,10 @@
 ### Part 3: Basic SvelteKit (03-sveltekit)
 - [x] **Introduction** (소개) - 완료 ✅
   - [x] What is SvelteKit? (SvelteKit이란?)
-- [ ] Routing
+- [x] **Routing** (라우팅) - 완료 ✅
+  - [x] Pages (페이지)
+  - [x] Layouts (레이아웃)
+  - [x] Route parameters (라우트 파라미터)
 - [ ] Loading data
 - [ ] Headers and cookies
 - [ ] Shared modules

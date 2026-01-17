@@ -121,7 +121,8 @@
 - [x] **Headers and cookies** (헤더와 쿠키) - 완료 ✅
   - [x] Setting headers (헤더 설정하기)
   - [x] Reading and writing cookies (쿠키 읽고 쓰기)
-- [ ] Shared modules
+- [x] **Shared modules** (공유 모듈) - 완료 ✅
+  - [x] The $lib alias ($lib 별칭)
 - [ ] Forms
 - [ ] API routes
 - [ ] App state

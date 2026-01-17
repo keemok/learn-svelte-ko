@@ -137,7 +137,11 @@
   - [x] page (page)
   - [x] navigating (navigating)
   - [x] updated (updated)
-- [ ] Errors and redirects
+- [x] **Errors and redirects** (에러와 리다이렉트) - 완료 ✅
+  - [x] Basics (기본)
+  - [x] Error pages (에러 페이지)
+  - [x] Fallback errors (폴백 에러)
+  - [x] Redirects (리다이렉트)
 
 ### Part 4: Advanced SvelteKit (04-advanced-sveltekit)
 - [ ] 작업 예정

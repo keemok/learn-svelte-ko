@@ -1,10 +1,10 @@
 ---
-title: Redirects
+title: 리다이렉트
 ---
 
-We can use the `redirect` mechanism to redirect from one page to another.
+`redirect` 메커니즘을 사용해서 한 페이지에서 다른 페이지로 리다이렉트할 수 있어요.
 
-Create a new `load` function in `src/routes/a/+page.server.js`:
+`src/routes/a/+page.server.js`에 새 `load` 함수를 만드세요:
 
 ```js
 /// file: src/routes/a/+page.server.js
@@ -15,14 +15,14 @@ export function load() {
 }
 ```
 
-Navigating to `/a` will now take us straight to `/b`.
+이제 `/a`로 이동하면 바로 `/b`로 갈 거예요.
 
-You can `redirect(...)` inside `load` functions, form actions, API routes and the `handle` hook, which we'll discuss in a later chapter.
+나중 챕터에서 논의할 `handle` 훅과 함께 `load` 함수, 폼 액션, API 라우트 안에서 `redirect(...)`를 할 수 있어요.
 
-The most common status codes you'll use:
+가장 일반적으로 사용할 상태 코드:
 
-- `303` — for form actions, following a successful submission
-- `307` — for temporary redirects
-- `308` — for permanent redirects
+- `303` — 폼 액션에서, 성공적인 제출 후
+- `307` — 임시 리다이렉트
+- `308` — 영구 리다이렉트
 
-> [!NOTE] `redirect(...)` throws, like `error(...)`, meaning no code _after_ the redirect will run.
+> [!NOTE] `redirect(...)`는 `error(...)`처럼 던져져서, 리다이렉트 이후의 코드는 실행되지 않아요.

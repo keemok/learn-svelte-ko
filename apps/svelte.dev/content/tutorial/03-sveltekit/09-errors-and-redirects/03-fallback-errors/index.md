@@ -1,10 +1,10 @@
 ---
-title: Fallback errors
+title: 폴백 에러
 ---
 
-If things go _really_ wrong — an error occurs while loading the root layout data, or while rendering the error page — SvelteKit will fall back to a static error page.
+상황이 정말 잘못되면 — 루트 레이아웃 데이터를 로드하는 동안 또는 에러 페이지를 렌더링하는 동안 에러가 발생하면 — SvelteKit은 정적 에러 페이지로 폴백해요.
 
-Add a new `src/routes/+layout.server.js` file to see this in action:
+실제로 보려면 새 `src/routes/+layout.server.js` 파일을 추가하세요:
 
 ```js
 /// file: src/routes/+layout.server.js
@@ -13,7 +13,7 @@ export function load() {
 }
 ```
 
-You can customise the fallback error page. Create a `src/error.html` file:
+폴백 에러 페이지를 커스터마이징할 수 있어요. `src/error.html` 파일을 만드세요:
 
 ```html
 /// file: src/error.html
@@ -22,7 +22,7 @@ You can customise the fallback error page. Create a `src/error.html` file:
 <p>%sveltekit.error.message%</p>
 ```
 
-This file can include the following:
+이 파일은 다음을 포함할 수 있어요:
 
-- `%sveltekit.status%` — the HTTP status code
-- `%sveltekit.error.message%` — the error message
+- `%sveltekit.status%` — HTTP 상태 코드
+- `%sveltekit.error.message%` — 에러 메시지

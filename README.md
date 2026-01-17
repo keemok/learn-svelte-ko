@@ -133,7 +133,10 @@
   - [x] GET handlers (GET 핸들러)
   - [x] POST handlers (POST 핸들러)
   - [x] Other handlers (다른 핸들러)
-- [ ] App state
+- [x] **App state** ($app/state) - 완료 ✅
+  - [x] page (page)
+  - [x] navigating (navigating)
+  - [x] updated (updated)
 - [ ] Errors and redirects
 
 ### Part 4: Advanced SvelteKit (04-advanced-sveltekit)

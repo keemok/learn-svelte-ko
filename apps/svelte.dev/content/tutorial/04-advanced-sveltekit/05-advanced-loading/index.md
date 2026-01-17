@@ -1,3 +1,3 @@
 ---
-title: Advanced loading
+title: 고급 로딩
 ---

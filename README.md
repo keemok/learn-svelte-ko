@@ -164,7 +164,13 @@
   - [x] Param matchers (파라미터 매처)
   - [x] Route groups (라우트 그룹)
   - [x] Breaking out of layouts (레이아웃에서 벗어나기)
-- [ ] Advanced loading
+- [x] **Advanced loading** (고급 로딩) - 완료 ✅
+  - [x] Universal load functions (범용 load 함수)
+  - [x] Using both load functions (두 load 함수 함께 사용하기)
+  - [x] Using parent data (부모 데이터 사용하기)
+  - [x] Invalidation (무효화)
+  - [x] Custom dependencies (커스텀 의존성)
+  - [x] invalidateAll (invalidateAll)
 - [ ] Environment variables
 - [ ] Conclusion
 

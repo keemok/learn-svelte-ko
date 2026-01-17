@@ -115,7 +115,9 @@
   - [x] Pages (페이지)
   - [x] Layouts (레이아웃)
   - [x] Route parameters (라우트 파라미터)
-- [ ] Loading data
+- [x] **Loading data** (데이터 로딩) - 완료 ✅
+  - [x] Page data (페이지 데이터)
+  - [x] Layout data (레이아웃 데이터)
 - [ ] Headers and cookies
 - [ ] Shared modules
 - [ ] Forms

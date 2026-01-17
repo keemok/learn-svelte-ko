@@ -1,17 +1,17 @@
 ---
-title: Page data
+title: 페이지 데이터
 path: /blog
 ---
 
-At its core, SvelteKit's job boils down to three things:
+핵심적으로 SvelteKit의 일은 세 가지로 요약돼요:
 
-1. **Routing** — figure out which route matches an incoming request
-2. **Loading** — get the data needed by the route
-3. **Rendering** — generate some HTML (on the server) or update the DOM (in the browser)
+1. **라우팅** — 들어오는 요청과 매칭되는 라우트 파악하기
+2. **로딩** — 라우트에 필요한 데이터 가져오기
+3. **렌더링** — HTML 생성하기 (서버에서) 또는 DOM 업데이트하기 (브라우저에서)
 
-We've seen how routing and rendering work. Let's talk about the middle part — loading.
+라우팅과 렌더링이 어떻게 작동하는지 봤어요. 이제 중간 부분인 로딩에 대해 얘기해봐요.
 
-Every page of your app can declare a `load` function in a `+page.server.js` file alongside the `+page.svelte` file. As the file name suggests, this module only ever runs on the server, including for client-side navigations. Let's add a `src/routes/blog/+page.server.js` file so that we can replace the hard-coded links in `src/routes/blog/+page.svelte` with actual blog post data:
+앱의 모든 페이지는 `+page.svelte` 파일 옆에 `+page.server.js` 파일에서 `load` 함수를 선언할 수 있어요. 파일 이름이 시사하듯이, 이 모듈은 클라이언트 사이드 탐색을 포함해서 오직 서버에서만 실행돼요. `src/routes/blog/+page.server.js` 파일을 추가해서 `src/routes/blog/+page.svelte`의 하드코딩된 링크를 실제 블로그 포스트 데이터로 교체해봐요:
 
 ```js
 /// file: src/routes/blog/+page.server.js
@@ -27,9 +27,9 @@ export function load() {
 }
 ```
 
-> [!NOTE] For the sake of the tutorial, we're importing data from `src/routes/blog/data.js`. In a real app, you'd be more likely to load the data from a database or a CMS, but for now we'll do it like this.
+> [!NOTE] 튜토리얼을 위해 `src/routes/blog/data.js`에서 데이터를 import하고 있어요. 실제 앱에서는 데이터베이스나 CMS에서 데이터를 로드할 가능성이 높지만, 지금은 이렇게 할게요.
 
-We can access this data in `src/routes/blog/+page.svelte` via the `data` prop:
+`data` prop을 통해 `src/routes/blog/+page.svelte`에서 이 데이터에 접근할 수 있어요:
 
 ```svelte
 /// file: src/routes/blog/+page.svelte
@@ -49,7 +49,7 @@ We can access this data in `src/routes/blog/+page.svelte` via the `data` prop:
 </ul>
 ```
 
-Now, let's do the same for the post page:
+이제 포스트 페이지에도 똑같이 해봐요:
 
 ```js
 /// file: src/routes/blog/[slug]/+page.server.js
@@ -75,7 +75,7 @@ export function load({ params }) {
 <div>{@html data.post.content}</div>+++
 ```
 
-There's one last detail we need to take care of — the user might visit an invalid pathname like `/blog/nope`, in which case we'd like to respond with a 404 page:
+마지막으로 처리해야 할 세부사항이 하나 있어요. 사용자가 `/blog/nope` 같은 유효하지 않은 경로를 방문할 수 있는데, 이 경우 404 페이지로 응답하고 싶어요:
 
 ```js
 /// file: src/routes/blog/[slug]/+page.server.js
@@ -93,4 +93,4 @@ export function load({ params }) {
 }
 ```
 
-We'll learn more about error handling in later chapters.
+나중 챕터에서 에러 처리에 대해 더 배울 거예요.

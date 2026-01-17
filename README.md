@@ -176,7 +176,8 @@
   - [x] $env/dynamic/private ($env/dynamic/private)
   - [x] $env/static/public ($env/static/public)
   - [x] $env/dynamic/public ($env/dynamic/public)
-- [ ] Conclusion
+- [x] **Conclusion** (결론) - 완료 ✅
+  - [x] Next steps (다음 단계)
 
 ## 🚀 로컬 개발 환경 설정
 

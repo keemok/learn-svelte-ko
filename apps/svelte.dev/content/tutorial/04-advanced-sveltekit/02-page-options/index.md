@@ -1,3 +1,3 @@
 ---
-title: Page options
+title: 페이지 옵션
 ---

@@ -1,23 +1,23 @@
 ---
-title: The RequestEvent object
+title: RequestEvent 객체
 ---
 
-The `event` object passed into `handle` is the same object — an instance of a [`RequestEvent`](/docs/kit/@sveltejs-kit#RequestEvent) — that is passed into [API routes](get-handlers) in `+server.js` files, [form actions](the-form-element) in `+page.server.js` files, and `load` functions in `+page.server.js` and `+layout.server.js`.
+`handle`에 전달된 `event` 객체는 `+server.js` 파일의 [API 라우트](get-handlers), `+page.server.js` 파일의 [폼 액션](the-form-element), `+page.server.js`와 `+layout.server.js`의 `load` 함수에 전달되는 것과 같은 객체예요. [`RequestEvent`](/docs/kit/@sveltejs-kit#RequestEvent)의 인스턴스죠.
 
-It contains a number of useful properties and methods, some of which we've already encountered:
+이미 만난 것들을 포함해서 많은 유용한 속성과 메서드를 담고 있어요:
 
-- `cookies` — the [cookies API](cookies)
-- `fetch` — the standard [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), with additional powers
-- `getClientAddress()` — a function to get the client's IP address
-- `isDataRequest` — `true` if the browser is requesting data for a page during client-side navigation, `false` if a page/route is being requested directly
-- `locals` — a place to put arbitrary data
-- `params` — the route parameters
-- `request` — the [Request](https://developer.mozilla.org/en-US/docs/Web/API/Request) object
-- `route` — an object with an `id` property representing the route that was matched
-- `setHeaders(...)` — a function for [setting HTTP headers](headers) on the response
-- `url` — a [URL](https://developer.mozilla.org/en-US/docs/Web/API/URL) object representing the current request
+- `cookies` — [cookies API](cookies)
+- `fetch` — 추가 능력을 가진 표준 [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+- `getClientAddress()` — 클라이언트의 IP 주소를 가져오는 함수
+- `isDataRequest` — 클라이언트 사이드 탐색 중 브라우저가 페이지의 데이터를 요청하면 `true`, 페이지/라우트가 직접 요청되면 `false`
+- `locals` — 임의의 데이터를 넣을 곳
+- `params` — 라우트 파라미터
+- `request` — [Request](https://developer.mozilla.org/en-US/docs/Web/API/Request) 객체
+- `route` — 매칭된 라우트를 나타내는 `id` 속성을 가진 객체
+- `setHeaders(...)` — 응답에 [HTTP 헤더를 설정](headers)하는 함수
+- `url` — 현재 요청을 나타내는 [URL](https://developer.mozilla.org/en-US/docs/Web/API/URL) 객체
 
-A useful pattern is to add some data to `event.locals` in `handle` so that it can be read in subsequent `load` functions:
+유용한 패턴은 `handle`에서 `event.locals`에 데이터를 추가해서 이후 `load` 함수에서 읽을 수 있게 하는 거예요:
 
 ```js
 /// file: src/hooks.server.js

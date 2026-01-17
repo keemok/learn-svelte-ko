@@ -1,16 +1,16 @@
 ---
-title: Basics
+title: 기본
 ---
 
-In the chapter on [loading data](/tutorial/kit/page-data), we saw how you can export `load` functions from `+page.js`, `+page.server.js`, `+layout.js` and `+layout.server.js` files. We can also export various **page options** from these modules:
+[데이터 로딩](/tutorial/kit/page-data) 챕터에서 `+page.js`, `+page.server.js`, `+layout.js`, `+layout.server.js` 파일에서 `load` 함수를 export하는 방법을 봤어요. 이 모듈들에서 다양한 **페이지 옵션**도 export할 수 있어요:
 
-- `ssr` — whether or not pages should be server-rendered
-- `csr` — whether to load the SvelteKit client
-- `prerender` — whether to prerender pages at build time, instead of per-request
-- `trailingSlash` — whether to strip, add, or ignore trailing slashes in URLs
+- `ssr` — 페이지를 서버 렌더링할지 여부
+- `csr` — SvelteKit 클라이언트를 로드할지 여부
+- `prerender` — 요청마다가 아닌 빌드 타임에 페이지를 사전 렌더링할지 여부
+- `trailingSlash` — URL의 후행 슬래시를 제거하거나, 추가하거나, 무시할지 여부
 
-In the following exercises, we'll learn about each of these in turn.
+다음 실습에서 이들 각각에 대해 차례로 배울 거예요.
 
-Page options can apply to individual pages (if exported from `+page.js` or `+page.server.js`), or groups of pages (if exported from `+layout.js` or `+layout.server.js`). To define an option for the whole app, export it from the root layout. Child layouts and pages override values set in parent layouts, so — for example — you can enable prerendering for your entire app then disable it for pages that need to be dynamically rendered.
+페이지 옵션은 개별 페이지(`+page.js` 또는 `+page.server.js`에서 export된 경우)나 페이지 그룹(`+layout.js` 또는 `+layout.server.js`에서 export된 경우)에 적용될 수 있어요. 전체 앱에 대한 옵션을 정의하려면 루트 레이아웃에서 export하세요. 자식 레이아웃과 페이지는 부모 레이아웃에 설정된 값을 재정의해요. 예를 들어 전체 앱에 대해 사전 렌더링을 활성화한 다음 동적으로 렌더링해야 하는 페이지에 대해서는 비활성화할 수 있어요.
 
-You can mix and match these options in different areas of your app — you could prerender your marketing pages, dynamically server-render your data-driven pages, and treat your admin pages as a client-rendered SPA. This makes SvelteKit very versatile.
+앱의 다른 영역에서 이 옵션들을 혼합해서 사용할 수 있어요. 마케팅 페이지는 사전 렌더링하고, 데이터 기반 페이지는 동적으로 서버 렌더링하고, 관리자 페이지는 클라이언트 렌더링 SPA로 취급할 수 있어요. 이것이 SvelteKit을 매우 다재다능하게 만들어요.

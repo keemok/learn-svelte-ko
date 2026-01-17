@@ -144,7 +144,22 @@
   - [x] Redirects (리다이렉트)
 
 ### Part 4: Advanced SvelteKit (04-advanced-sveltekit)
-- [ ] 작업 예정
+- [x] **Hooks** (훅) - 완료 ✅
+  - [x] handle (handle)
+  - [x] The RequestEvent object (RequestEvent 객체)
+  - [x] handleFetch (handleFetch)
+  - [x] handleError (handleError)
+- [x] **Page options** (페이지 옵션) - 완료 ✅
+  - [x] Basics (기본)
+  - [x] ssr (ssr)
+  - [x] csr (csr)
+  - [x] prerender (prerender)
+  - [x] trailingSlash (trailingSlash)
+- [ ] Link options
+- [ ] Advanced routing
+- [ ] Advanced loading
+- [ ] Environment variables
+- [ ] Conclusion
 
 ## 🚀 로컬 개발 환경 설정
 

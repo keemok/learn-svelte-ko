@@ -2,21 +2,21 @@
 title: prerender
 ---
 
-Prerendering means generating HTML for a page once, at build time, rather than dynamically for each request.
+사전 렌더링은 각 요청마다 동적으로가 아니라 빌드 타임에 한 번 페이지의 HTML을 생성하는 것을 의미해요.
 
-The advantage is that serving static data is extremely cheap and performant, allowing you to easily serve large numbers of users without worrying about cache-control headers (which are easy to get wrong).
+장점은 정적 데이터를 제공하는 것이 극도로 저렴하고 성능이 좋아서, cache-control 헤더(잘못하기 쉬워요)에 대해 걱정하지 않고 많은 수의 사용자를 쉽게 서비스할 수 있다는 거예요.
 
-The tradeoff is that the build process takes longer, and prerendered content can only be updated by building and deploying a new version of the application.
+트레이드오프는 빌드 프로세스가 더 오래 걸리고, 사전 렌더링된 콘텐츠는 애플리케이션의 새 버전을 빌드하고 배포해야만 업데이트될 수 있다는 거예요.
 
-To prerender a page, set `prerender` to `true`:
+페이지를 사전 렌더링하려면 `prerender`를 `true`로 설정하세요:
 
 ```js
 /// file: src/routes/+page.server.js
 export const prerender = true;
 ```
 
-Here in the tutorial, this won't have any observable effect, since the application is running in `dev` mode.
+여기 튜토리얼에서는 애플리케이션이 `dev` 모드에서 실행되고 있기 때문에 관찰 가능한 효과가 없을 거예요.
 
-Not all pages can be prerendered. The basic rule is this: for content to be prerenderable, any two users hitting it directly must get the same content from the server, and the page must not contain form actions. Pages with dynamic route parameters can be prerendered as long as they are specified in the [`prerender.entries`](/docs/kit/configuration#prerender) configuration or can be reached by following links from pages that _are_ in `prerender.entries`.
+모든 페이지가 사전 렌더링될 수 있는 건 아니에요. 기본 규칙은 이거예요. 콘텐츠가 사전 렌더링 가능하려면, 직접 접근하는 두 명의 사용자가 서버에서 같은 콘텐츠를 받아야 하고, 페이지가 폼 액션을 포함하지 않아야 해요. 동적 라우트 파라미터를 가진 페이지는 [`prerender.entries`](/docs/kit/configuration#prerender) 설정에 지정되어 있거나 `prerender.entries`에 있는 페이지에서 링크를 따라가서 도달할 수 있는 한 사전 렌더링될 수 있어요.
 
-> [!NOTE] Setting `prerender` to `true` inside your root `+layout.server.js` effectively turns SvelteKit into a static site generator (SSG).
+> [!NOTE] 루트 `+layout.server.js` 안에서 `prerender`를 `true`로 설정하면 SvelteKit이 효과적으로 정적 사이트 생성기(SSG)가 돼요.

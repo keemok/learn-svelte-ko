@@ -1,8 +1,8 @@
 ---
-title: Exports
+title: Export
 ---
 
-Anything exported from a `module` script block becomes an export from the module itself. Let's export a `pauseAll` function:
+`module` script 블록에서 export된 것은 모듈 자체의 export가 돼요. `pauseAll` 함수를 export해봐요:
 
 ```svelte
 /// file: AudioPlayer.svelte
@@ -15,7 +15,7 @@ Anything exported from a `module` script block becomes an export from the module
 </script>
 ```
 
-We can now import `pauseAll` in `App.svelte`...
+이제 `App.svelte`에서 `pauseAll`을 import할 수 있어요...
 
 ```svelte
 /// file: App.svelte
@@ -25,7 +25,7 @@ We can now import `pauseAll` in `App.svelte`...
 </script>
 ```
 
-...and use it in an event handler:
+...그리고 이벤트 핸들러에서 사용할 수 있어요:
 
 ```svelte
 /// file: App.svelte
@@ -40,4 +40,4 @@ We can now import `pauseAll` in `App.svelte`...
 </div>
 ```
 
-> [!NOTE] You can't have a default export, because the component _is_ the default export.
+> [!NOTE] 기본 export는 가질 수 없어요. 컴포넌트 자체가 기본 export이거든요.

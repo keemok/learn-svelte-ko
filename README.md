@@ -102,7 +102,9 @@
   - [x] <svelte:head> (<svelte:head>)
   - [x] <svelte:element> (<svelte:element>)
   - [x] <svelte:boundary> (<svelte:boundary>)
-- [ ] Script module
+- [x] **Script module** (<script module>) - 완료 ✅
+  - [x] Sharing code (코드 공유하기)
+  - [x] Exports (Export)
 - [ ] Next steps
 
 ### Part 3: Basic SvelteKit (03-sveltekit)

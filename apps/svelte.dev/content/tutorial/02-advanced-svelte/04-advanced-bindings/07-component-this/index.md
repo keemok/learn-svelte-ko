@@ -1,12 +1,12 @@
 ---
-title: Binding to component instances
+title: 컴포넌트 인스턴스에 바인딩하기
 ---
 
-Just as you can bind to DOM elements, you can bind to component instances themselves with `bind:this`.
+DOM 요소에 바인딩할 수 있는 것처럼, `bind:this`로 컴포넌트 인스턴스 자체에도 바인딩할 수 있어요.
 
-This is useful in the rare cases that you need to interact with a component programmatically (rather than by providing it with updated props). Revisiting our canvas app from [a few exercises ago](attach), it would be nice to add a button to clear the screen.
+이건 프로그래밍 방식으로 컴포넌트와 상호작용해야 하는 드문 경우에 유용해요 (업데이트된 props를 제공하는 대신). [몇 가지 실습 전에](attach) 했던 캔버스 앱을 다시 살펴보면, 화면을 지우는 버튼을 추가하는 게 좋을 것 같아요.
 
-First, let's export a function from `Canvas.svelte`:
+먼저, `Canvas.svelte`에서 함수를 export해봐요:
 
 ```svelte
 /// file: Canvas.svelte
@@ -19,7 +19,7 @@ let coords = $state();
 }+++
 ```
 
-Then, create a reference to the component instance:
+그다음 컴포넌트 인스턴스에 대한 참조를 만드세요:
 
 ```js
 /// file: App.svelte
@@ -35,7 +35,7 @@ let showMenu = $state(true);
 <Canvas +++bind:this={canvas}+++ color={selected} size={size} />
 ```
 
-Finally, add a button that calls the `clear` function:
+마지막으로 `clear` 함수를 호출하는 버튼을 추가하세요:
 
 ```svelte
 /// file: App.svelte

@@ -81,7 +81,14 @@
 - [x] **Motion** (모션) - 완료 ✅
   - [x] Tweened values (Tweened 값)
   - [x] Springs (스프링)
-- [ ] Advanced bindings
+- [x] **Advanced bindings** (고급 바인딩) - 완료 ✅
+  - [x] Contenteditable bindings (Contenteditable 바인딩)
+  - [x] Each block bindings (Each 블록 바인딩)
+  - [x] Media elements (미디어 요소)
+  - [x] Dimensions (크기)
+  - [x] This (This)
+  - [x] Component bindings (컴포넌트 바인딩)
+  - [x] Binding to component instances (컴포넌트 인스턴스에 바인딩하기)
 - [ ] Advanced transitions
 - [ ] Context
 - [ ] Special elements

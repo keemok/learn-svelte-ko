@@ -105,7 +105,8 @@
 - [x] **Script module** (<script module>) - 완료 ✅
   - [x] Sharing code (코드 공유하기)
   - [x] Exports (Export)
-- [ ] Next steps
+- [x] **Next steps** (다음 단계) - 완료 ✅
+  - [x] Congratulations! (축하합니다!)
 
 ### Part 3: Basic SvelteKit (03-sveltekit)
 - [ ] 작업 예정

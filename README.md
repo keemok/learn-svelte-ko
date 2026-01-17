@@ -171,7 +171,11 @@
   - [x] Invalidation (무효화)
   - [x] Custom dependencies (커스텀 의존성)
   - [x] invalidateAll (invalidateAll)
-- [ ] Environment variables
+- [x] **Environment variables** (환경 변수) - 완료 ✅
+  - [x] $env/static/private ($env/static/private)
+  - [x] $env/dynamic/private ($env/dynamic/private)
+  - [x] $env/static/public ($env/static/public)
+  - [x] $env/dynamic/public ($env/dynamic/public)
 - [ ] Conclusion
 
 ## 🚀 로컬 개발 환경 설정

@@ -2,7 +2,7 @@
 title: $env/dynamic/public
 ---
 
-As with [private environment variables](/tutorial/kit/env-static-private), it's preferable to use static values if possible, but if necessary we can use dynamic values instead:
+[private 환경 변수](/tutorial/kit/env-static-private)처럼, 가능하면 정적 값을 사용하는 게 바람직하지만, 필요하다면 대신 동적 값을 사용할 수 있어요:
 
 ```svelte
 /// file: src/routes/+page.svelte

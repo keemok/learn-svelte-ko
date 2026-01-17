@@ -1,3 +1,3 @@
 ---
-title: Environment variables
+title: 환경 변수
 ---

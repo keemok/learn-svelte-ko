@@ -94,7 +94,14 @@
   - [x] Animations (애니메이션)
 - [x] **Context** (Context) - 완료 ✅
   - [x] setContext and getContext (setContext와 getContext)
-- [ ] Special elements
+- [x] **Special elements** (특수 요소) - 완료 ✅
+  - [x] <svelte:window> (<svelte:window>)
+  - [x] <svelte:window> bindings (<svelte:window> 바인딩)
+  - [x] <svelte:document> (<svelte:document>)
+  - [x] <svelte:body> (<svelte:body>)
+  - [x] <svelte:head> (<svelte:head>)
+  - [x] <svelte:element> (<svelte:element>)
+  - [x] <svelte:boundary> (<svelte:boundary>)
 - [ ] Script module
 - [ ] Next steps
 

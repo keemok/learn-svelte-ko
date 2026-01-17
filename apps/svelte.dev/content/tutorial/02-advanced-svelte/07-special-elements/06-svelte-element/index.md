@@ -2,7 +2,7 @@
 title: <svelte:element>
 ---
 
-Sometimes you don't know in advance which element needs to be rendered. Rather than having a long list of `{#if ...}` blocks...
+어떤 요소를 렌더링해야 할지 미리 알 수 없을 때가 있어요. 긴 `{#if ...}` 블록 목록을 갖는 대신...
 
 ```svelte
 /// file: App.svelte
@@ -13,7 +13,7 @@ Sometimes you don't know in advance which element needs to be rendered. Rather t
 {/if}
 ```
 
-...we can use `<svelte:element>`:
+...`<svelte:element>`를 쓸 수 있어요:
 
 ```svelte
 /// file: App.svelte
@@ -22,4 +22,4 @@ Sometimes you don't know in advance which element needs to be rendered. Rather t
 </svelte:element>+++
 ```
 
-The `this` value can be any string, or a falsy value — if it's falsy, no element is rendered.
+`this` 값은 어떤 문자열이든 될 수 있고, falsy 값도 가능해요. falsy면 아무 요소도 렌더링되지 않아요.

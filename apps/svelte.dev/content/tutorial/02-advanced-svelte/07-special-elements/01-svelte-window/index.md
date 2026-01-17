@@ -2,9 +2,9 @@
 title: <svelte:window>
 ---
 
-Just as you can add event listeners to any DOM element, you can add event listeners to the `window` object with `<svelte:window>`.
+모든 DOM 요소에 이벤트 리스너를 추가할 수 있는 것처럼, `<svelte:window>`로 `window` 객체에도 이벤트 리스너를 추가할 수 있어요.
 
-We've already got an `onkeydown` function declared — now all we need to do is wire it up:
+이미 `onkeydown` 함수가 선언돼 있어요. 이제 연결만 하면 돼요:
 
 ```svelte
 /// file: App.svelte
